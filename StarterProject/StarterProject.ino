@@ -7,13 +7,13 @@
 #define LED_PIN     6
 
 // How many NeoPixels are attached to the Arduino?
-#define LED_COUNT  120
+#define LED_COUNT  75
 
 // NeoPixel brightness, 0 (min) to 255 (max)
 #define BRIGHTNESS 50 // Set BRIGHTNESS to about 1/5 (max = 255)
 
 // Declare our NeoPixel strip object:
-Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRBW + NEO_KHZ800);
+Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
@@ -28,7 +28,7 @@ void loop() {
   // combine these colors together. The values for red, green and blue are in the range of (0-255). 
   // For example, to get a shade of purple, you can specify red and blue values (e.g. strip.Color(200,0,255)
  
- colorWipe(strip.Color(255,0,0), 5);
+ colorWipe(strip.Color(255,0,0), 50);
 // showAllAtOnce(strip.Color(255,255,0));
 // showAlternatingColorsAllAtOnce(strip.Color(0,255,0), strip.Color(0,0,255));
 // showAlternatingColorsOneByOne(strip.Color(0,255,0), strip.Color(0,0,255));
